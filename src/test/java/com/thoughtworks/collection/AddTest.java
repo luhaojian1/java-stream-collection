@@ -45,6 +45,7 @@ public class AddTest {
     @Test
     public void should_get_triple_of_odd_and_add_two() {
         //求数组中奇数元素的3倍加2，偶数元素不变的数组
+
         Integer[] array = new Integer[]{1, 5, 7, 12, 11, 35, 54, 67, 70};
         List<Integer> arrayList = Arrays.asList(array);
 
