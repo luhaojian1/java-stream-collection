@@ -23,7 +23,7 @@ public class Add {
     }
 
     public List<Integer> getTripleOfOddAndAddTwo(List<Integer> arrayList) {
-        return null;
+        return arrayList.stream().map(x -> (x % 2 != 0 ? (x * 3 + 2) : x)).collect(Collectors.toList());
 
     }
 
