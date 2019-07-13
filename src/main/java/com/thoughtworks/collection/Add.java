@@ -36,7 +36,7 @@ public class Add {
 //    }
 
     public double getAverageOfEven(List<Integer> arrayList) {
-        return 0;
+        return arrayList.stream().filter(x -> x % 2 == 0).mapToInt(i -> i).average().orElse(0);
     }
 
     public boolean isIncludedInEvenIndex(List<Integer> arrayList, Integer specialElment) {
