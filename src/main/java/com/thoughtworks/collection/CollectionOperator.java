@@ -9,9 +9,12 @@ import java.util.stream.Stream;
 
 public class CollectionOperator {
     public List<Integer> getListByInterval(int left, int right) {
-
-        return null;
-
+        int leftBorder = Math.min(left, right);
+        int rightBorder = Math.max(left, right);
+        return IntStream.rangeClosed(leftBorder, rightBorder)
+                .boxed()
+                .sorted(left < right ? Comparator.naturalOrder() : Comparator.reverseOrder())
+                .collect(Collectors.toList());
     }
 
     public List<Integer> getEvenListByIntervals(int left, int right) {
