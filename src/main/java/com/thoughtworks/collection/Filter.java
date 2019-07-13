@@ -23,7 +23,7 @@ public class Filter {
     }
 
     public List<Integer> getCommonElements(List<Integer> firstList, List<Integer> secondList) {
-        return null;
+        return firstList.stream().filter(secondList::contains).collect(Collectors.toList());
     }
 
     public List<Integer> getDifferentElements() {
