@@ -2,6 +2,7 @@ package com.thoughtworks.collection;
 
 import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
@@ -23,7 +24,7 @@ public class MyMap {
     }
 
     public List<String> mapLetter() {
-        return null;
+        return array.stream().map((num) -> letters[num - 1]).collect(Collectors.toList());
     }
 
     public List<String> mapLetters() {
