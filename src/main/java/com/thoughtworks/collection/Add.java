@@ -44,7 +44,7 @@ public class Add {
     }
 
     public List<Integer> getUnrepeatedFromEvenIndex(List<Integer> arrayList) {
-        return null;
+        return arrayList.stream().filter(x -> x % 2 == 0).distinct().collect(Collectors.toList());
     }
 
 //    public List<Integer> sortByEvenAndOdd(List<Integer> arrayList) {
