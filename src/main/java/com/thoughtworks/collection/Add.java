@@ -4,28 +4,27 @@ import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
 import java.util.List;
 import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
 public class Add {
     public int getSumOfEvens(int leftBorder, int rightBorder) {
-        int[] arr = new int[Math.abs(leftBorder - rightBorder)];
-        if (leftBorder <= rightBorder){
-
-        }
-        return 0;
+        int left = leftBorder <= rightBorder ? leftBorder : rightBorder;
+        int right = leftBorder > rightBorder ? leftBorder : rightBorder;
+        return IntStream.range(left, right + 1).filter(x -> x % 2 == 0).sum();
     }
 
     public int getSumOfOdds(int leftBorder, int rightBorder) {
         throw new NotImplementedException();
     }
 
-    public int getSumTripleAndAddTwo(List<Integer> arrayList){
-        return arrayList.stream().map(x -> x*3 + 2 ).reduce(0,Integer::sum);
+    public int getSumTripleAndAddTwo(List<Integer> arrayList) {
+        return arrayList.stream().map(x -> x * 3 + 2).reduce(0, Integer::sum);
     }
 
     public List<Integer> getTripleOfOddAndAddTwo(List<Integer> arrayList) {
-        final List<Integer> collect = arrayList.stream().map(x -> (x % 2 == 0?x:(x * 3 + 2))).collect(Collectors.toList());
-        return collect;
+        return null;
+
     }
 
     public int getSumOfProcessedOdds(List<Integer> arrayList) {
@@ -37,7 +36,7 @@ public class Add {
 //    }
 
     public double getAverageOfEven(List<Integer> arrayList) {
-        return arrayList.stream().filter(x -> x % 2 == 0).mapToInt(i -> i).average().orElse(0);
+        return 0;
     }
 
     public boolean isIncludedInEvenIndex(List<Integer> arrayList, Integer specialElment) {
@@ -45,7 +44,7 @@ public class Add {
     }
 
     public List<Integer> getUnrepeatedFromEvenIndex(List<Integer> arrayList) {
-        throw new NotImplementedException();
+        return null;
     }
 
 //    public List<Integer> sortByEvenAndOdd(List<Integer> arrayList) {
