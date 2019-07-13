@@ -23,10 +23,10 @@ public class Filter {
     }
 
     public List<Integer> getCommonElements(List<Integer> firstList, List<Integer> secondList) {
-        throw new NotImplementedException();
+        return null;
     }
 
     public List<Integer> getDifferentElements() {
-        throw new NotImplementedException();
+        return array.stream().distinct().collect(Collectors.toList());
     }
 }
